@@ -6,9 +6,14 @@ const router = Router();
 
 // POST / reviews
 
-router.post("/", (req, res) => {
-  const data = createReviews(req.body);
-  res.json(data);
+router.post("/", async (req, res) => {
+  try {
+    const data = await createReviews(req.body);
+    res.status(201).json(data);
+  } catch (error) {
+    console.log(`Error: ${error.message}`);
+    res.status(400).json({ error: error.message });
+  }
 });
 
 router.patch("/:id", (req, res) => {

@@ -1,19 +1,9 @@
-function getAllReviews() {
-  const mockData = [
-    {
-      RevTitle: 1,
-      RevName: "review 1",
-    },
-    {
-      RevTitle: 2,
-      RevName: "review 2",
-    },
-    {
-      RevTitle: 3,
-      RevNamee: "review 3",
-    },
-  ];
-  return mockData;
+const { Review } = require("../models/reviewModel");
+
+async function getAllReviews() {
+  const data = await Review.find();
+  console.log(data);
+  return data;
 }
 
 module.exports = getAllReviews;
