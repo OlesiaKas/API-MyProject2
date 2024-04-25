@@ -11,6 +11,9 @@ app.use(cors());
 app.use(express.json());
 app.use("/reviews", require("./routes/reviewGetterRouts"));
 app.use("/reviews", require("./routes/reviewSetterRouts"));
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 
 const connectDB = async () => {
   try {
