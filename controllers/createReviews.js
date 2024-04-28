@@ -1,5 +1,7 @@
 const Review = require("../models/reviewModel");
-const createReviewValidation = require("../validation/createReviewValidation");
+const {
+  createReviewValidation,
+} = require("../validation/createReviewValidation");
 
 async function createReviews(props) {
   console.log(props);
