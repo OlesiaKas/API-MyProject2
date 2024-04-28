@@ -7,8 +7,8 @@ async function createReviews(props) {
   createReviewValidation(props);
 
   const response = await Review.create({
-    RevTitle: props.RevTitle,
-    RevName: props.RevName,
+    title: props.title,
+    description: props.description,
   });
   return response;
 }
