@@ -3,7 +3,7 @@ const { Types } = require("mongoose");
 function updateReviewValidation(id, data) {
   if (
     !data ||
-    (!data.hasOwnProperty("RevTitle") && !data.hasOwnProperty("RevName"))
+    (!data.hasOwnProperty("title") && !data.hasOwnProperty("description"))
   ) {
     throw new Error("data is required");
   }

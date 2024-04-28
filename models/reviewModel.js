@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
 const reviewSchema = new mongoose.Schema({
-  RevTitle: {
+  title: {
     type: String,
     required: true,
   },
-  RevName: {
+  description: {
     type: String,
     required: true,
   },

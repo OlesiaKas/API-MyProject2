@@ -1,11 +1,11 @@
 function createReviewValidation(props) {
   if (
-    !props?.RevTitle?.trim() ||
-    !props?.RevName.trim() ||
-    !props?.RevName !== "string" ||
-    !props?.RevTitle !== "string"
+    !props?.title?.trim() ||
+    !props?.description.trim() ||
+    !props?.description !== "string" ||
+    !props?.title !== "string"
   ) {
-    throw new Error("RevTitle and RevName are required");
+    throw new Error("title and description are required");
   }
 }
 
